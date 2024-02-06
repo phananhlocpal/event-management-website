@@ -1,0 +1,99 @@
+:root {
+    --blue-1: #003480;
+    --blue-2: #005bbc;
+    --blue-3: #006ad8;
+    --blue-4: #4285f3;
+    --bg-color: #E7ECF0;
+    --text-color-1: black;
+    --text-color-2: white;
+    --black-1: #262639;
+    --black-2: #4D4D5D;
+    --gradient-color: linear-gradient(to right, #004aad, #005bbc, #006ad8, #2d8cef);
+    --nav-bar-width: 80px;
+    --bg-color-2: #E7ECF0;
+}
+
+.body-container .body-content {
+
+    display: flex;
+    width: 100vw;
+}
+
+
+#block__left {
+    width: 50%;
+    height: 100%;
+    padding: 100px;
+}
+#block__memberCard {
+    background-color: white;
+    height: 60vh;
+    padding: 20px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+#block__memberCard #container__img {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#container__img img {
+    width: 280px;
+    border-radius: 50%;
+}
+
+#container__info {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#container__info #name {
+    font-weight: 600;
+    font-size: 2.5rem;
+}
+
+#container__info #role {
+    font-size: 1.5rem;
+}
+
+#block__right {
+    height: 100%;
+    padding: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    align-items: center;
+}
+
+#block__updateUser div {
+    margin-right: 20px
+}
+
+#block__detailInformation p {
+    font-size: 1rem;
+}
+
+#block__updateUser {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.editUserBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.editUserBtn div {
+    margin-left: 10px;
+}
+
+.uploadAvaBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.uploadAvaBtn div {
+    margin-left: 10px;
+}

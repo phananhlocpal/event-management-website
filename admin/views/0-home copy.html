@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PClub Home</title>
+    <link rel="stylesheet" href="public/css/home.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="public/css/frame.css" type="text/css" media="screen">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="shortcut icon" type="image/png" href="public/img/logo/2.png" />
+</head>
+
+<body>
+    <!-------------------------- Nav-bar --------------------------->
+    <section class="nav-bar">
+        <div class="top">
+            <img src="public/img/logo/3.png" alt="PClub Logo" id="full-logo">
+            <img src="public/img/logo/4.png" alt="PClub Logo" id="small-logo">
+        </div>
+        <div class="ava-container">
+            <div class="avatar">
+                <img src="public/img/logo/4.png" alt="PClub Logo" id="small-logo">
+            </div>
+            <div class="user-information">
+                <p style="font-size: 1rem; font-weight: 600;">Phan Anh Loc</p>
+                <p>Member</p>
+                <div class="status">
+                    <div style="width: .5rem; height: .5rem; border-radius: 50%; background-color: greenyellow;"></div>
+                    <p>Online</p>
+                </div>
+            </div>
+        </div>
+        <ul class="component__navbar">
+            <li class="block__navbar">
+                <a href="../views/0-home.php">
+                    <i class='bx bxs-home'></i>
+                    <span class="nav-item">Home</span>
+                </a>
+                <span class="tooltip">Home</span>
+            </li>
+            <li class="block__navbar">
+                <a href="../page/media/list-media.html">
+                    <i class='bx bxl-meta'></i>
+                    <span class="nav-item">Media</span>
+                </a>
+                <span class="tooltip">Media</span>
+            </li>
+            <li class="block__navbar">
+                <a href="../views/1-1-list-event.php">
+                    <i class='bx bxs-calendar-event'></i>
+                    <span class="nav-item">Event</span>
+                </a>
+                <span class="tooltip">Event</span>
+            </li>
+            <li class="block__navbar">
+                <a href="../page/member/member.html">
+                    <i class='bx bx-male-female'></i>
+                    <span class="nav-item">Member</span>
+                </a>
+                <span class="tooltip">Member</span>
+            </li>
+        </ul>
+
+    </section>
+    <section class="main-body">
+        <!---------------------------------Header------------------------------------------------>
+        <section class="header">
+            <div class="align-justify">
+                <i class='bx bx-menu' style="margin-left: 6rem; font-size: 3rem; color: white" id="btn"></i>
+            </div>
+            <div class="header-information">
+                <i class='bx bxs-bell' style=" font-size: 2rem; color: white; margin-right: 2rem; "></i>
+                <div>
+                    <img src="public/img/logo/4.png" alt="PClub Logo" id="small-logo" style="max-width: 2rem;  margin-right: 1.5rem">
+                </div>
+                <p style="font-size: 1rem; font-weight: 600; color: white; margin-right: 1rem">Phan Anh Loc</p>
+                <i class='bx bxs-down-arrow' style="font-size: 1rem; color: white; margin-right: 2rem"
+                    id="userOptionBtn"></i>
+            </div>
+        </section>
+        <?php
+            include 'layout/navBar.php';
+            include 'layout/userOptionBlock.php';
+        ?>
+        <!------------------------------------ Body ------------------------------------------------->
+        <section class="body-container">
+            <?php
+                include 'layout/header.php';
+            ?>
+            <!------------------------------Body Content------------------------------------------------>
+            <section class="body-content" style="margin: 0; padding: 0;">
+                <div class="banner">
+                    <img src="public/img/banner/banner.png" alt="">
+                </div>
+                <p style="font-size: 3.5rem; font-weight: 900; margin: 2rem;">Dashboard</p>
+                <div class="dashboard">
+                    <div class="dashboard-detail">
+                        <div class="icon-box">
+                            <i class='bx bx-task'></i>
+                        </div>
+                        <div class="dashboard-information">
+                            <p>Not-done tasks in this week</p>
+                            <p class="number">2</p>
+                            <a href="">More Detail</a>
+                        </div>
+                    </div>
+                    <div class="dashboard-detail">
+                        <div class="icon-box">
+                            <i class='bx bxs-calendar-event'></i>
+                        </div>
+                        <div class="dashboard-information">
+                            <p>Events in this week</p>
+                            <p class="number">2</p>
+                            <a href="">More Detail</a>
+                        </div>
+                    </div>
+                    <div class="dashboard-detail">
+                        <div class="icon-box">
+                            <i class='bx bx-message-dots'></i>
+                        </div>
+                        <div class="dashboard-information">
+                            <p>Meetingseve in this week</p>
+                            <p class="number">2</p>
+                            <a href="">More Detail</a>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+        </section>
+    </section>
+    <!---------------------------------Footer------------------------------------------------>
+    <section class="footer">
+        <p>&copy; 2023 PClub Internal Website. All right reserved. Made by Phan Anh Loc (Paul Phan)</p>
+        <div class="footer-logo">
+            <img src="public/img/logo/3.png" alt="PClub Logo"
+            style="max-width: 70px; height: auto; position: absolute; right: 0px;">
+        </div>
+    </section>
+    <script src="public/js/frame.js"></script>
+    
+</body>
+
+</html>

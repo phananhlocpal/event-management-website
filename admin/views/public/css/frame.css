@@ -1,0 +1,355 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --blue-1: #003480;
+    --blue-2: #005bbc;
+    --blue-3: #006ad8;
+    --blue-4: #4285f3;
+    --bg-color: #E7ECF0;
+    --text-color-1: black;
+    --text-color-2: white;
+    --black-1: #262639;
+    --black-2: #4D4D5D;
+    --gradient-color: linear-gradient(to right, #004aad, #005bbc, #006ad8, #2d8cef);
+    --nav-bar-width: 80px;
+    --bg-color-2: #E7ECF0;
+}
+
+html {
+    font-size: 15px;
+    overflow-x: hidden;
+}
+
+body {
+    display: grid;
+    grid-template-rows: auto;
+    background: var(--bg-color);
+    color: var(--text-color-1);
+}
+
+
+
+/*Nav - bar*/
+#btn:hover {
+    cursor: pointer;
+}
+
+.nav-bar {
+    background: var(--black-1);
+    width: var(--nav-bar-width);
+    height: 100vh;
+    padding-left: 1rem;
+    padding-top: 1rem;
+    transition: all 0.5s ease;
+    position: absolute;
+}
+
+.nav-bar.active {
+    width: 250px;
+    z-index: 100;
+}
+
+.nav-bar.active~.body-container {
+    left: 250px;
+    width: calc(100% - 250px);
+}
+
+/*---------------User Option-------------*/
+
+#block__userOption {
+    background-color: white;
+    width: 200px;
+    height: 170px;
+    position: absolute;
+    right: 40px;
+    top: 60px;
+    z-index: 10;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    opacity: 0;
+    transition: all .3s ease;
+}
+
+
+
+#block__userOption .btn__userOption {
+    border-bottom: solid .3px grey;
+    padding: 10px;
+    margin-top: 10px;
+    display:  flex;
+    justify-content: start;
+    align-items: center;
+}
+
+#block__userOption a .btn__userOption i {
+    padding: 10px;
+    font-size: 20px;
+    color: black;
+}
+
+#block__userOption .btn__userOption p {
+    font-size: 12px;
+    color: black;
+}
+
+#block__userOption .btn__userOption:hover {
+    background-color: var(--blue-1);
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+    transition: all .25s ease;
+}
+
+#block__userOption .btn__userOption:hover i,
+#block__userOption .btn__userOption:hover p {
+    color: white;
+}
+
+#block__userOption.active_userOption {
+    opacity: 1;
+    transition: all .3s ease;
+}
+
+
+/*--------------------Navbar Logo------------------*/
+#full-logo {
+    width: 0;
+    opacity: 0;
+    position: absolute;
+}
+
+.nav-bar.active .top #full-logo {
+    width: 6rem;
+    opacity: 1;
+}
+
+#small-logo {
+    opacity: 1;
+    width: 3rem;
+}
+
+.nav-bar.active .top #small-logo {
+    left: 90%;
+    opacity: 0;
+}
+
+.nav-bar .top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s ease;
+}
+
+.nav-bar.active .top {
+    justify-content: start;
+    transition: all 0.5s ease;
+}
+
+/*--------------------Navbar Avatar------------------*/
+.ava-container {
+    color: var(--text-color-2);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+
+.ava-container .user-information {
+    margin-left: 1rem;
+    font-size: .9rem;
+    opacity: 1;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.nav-bar .user-information {
+    opacity: 0;
+}
+
+.nav-bar.active .user-information {
+    left: 5%;
+    opacity: 1;
+}
+
+.status {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.status p {
+    margin-left: 5px;
+    margin-bottom: 0px!important;
+}
+
+.avatar img {
+    border-radius: 50%;
+    max-width: 3.5rem;
+}
+
+/*--------------------Navbar Menu------------------*/
+
+.nav-bar ul {
+    padding-left: 0rem!important;
+}
+
+.nav-bar ul .block__navbar {
+    position: relative;
+    list-style-type: none;
+    height: 50px;
+    width: 90%;
+    margin: 0.8rem auto;
+    line-height: 50px;
+    padding-left: 0rem;
+}
+
+.nav-bar ul .block__navbar a {
+    color: white;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    border-radius: 0.8rem;
+    font-size: 1.1rem;
+}
+
+.nav-bar ul .block__navbar a:hover {
+    background-color: white;
+    color: var(--black-1);
+    margin-right: .5rem;
+}
+
+.nav-bar ul .block__navbar a i {
+    min-width: 50px;
+    text-align: center;
+    height: 50px;
+    border-radius: 12px;
+    line-height: 50px;
+    font-size: 2rem;
+    margin-right: 15px;
+}
+
+.nav-bar .nav-item {
+    opacity: 0;
+}
+
+.nav-bar.active .nav-item {
+    opacity: 1;
+}
+
+.nav-bar ul .block__navbar .tooltip {
+    position: absolute;
+    left: 125px;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0.5rem 0.8rem var(--black-1);
+    background-color: white;
+    border-radius: .6rem;
+    padding: .5rem 1.5rem;
+    line-height: 1.8rem;
+    z-index: -1;
+    opacity: 0;
+    font-size: 1rem;
+}
+
+.nav-bar ul .block__navbar:hover .tooltip {
+    opacity: 1;
+    z-index: 20;
+}
+
+.nav-bar.active ul .block__navbar .tooltip {
+    display: none;
+}
+
+
+/*Main body*/
+
+.body-container {
+    position: relative;
+    transition: all 0.5s ease;
+    width: calc(100% - 80px);
+    min-height: 100vh;
+    top: 0;
+    left: 80px;
+}
+
+.body-content {
+    height: 89vh;
+    overflow: auto;
+    padding: 1rem;
+}
+
+/*----------------Header----------------------*/
+.header {
+    background: var(--gradient-color);
+    display: flex;
+    justify-content: space-between;
+    height: 7vh;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    
+}
+
+.header-information {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 30px;
+}
+
+#userOptionBtn {
+    cursor: pointer;
+}
+
+.align-justify {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*Footer*/
+
+.footer {
+    background-color: var(--black-1);
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    bottom: 0;
+    width: 100vw;
+    height: 4vh;
+    color: var(--text-color-2);
+    z-index: 200;
+}
+
+.footer p {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    font-size: .8rem;
+    padding-left: 1rem;
+}
+
+.footer-logo {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+/*------------Scroll bar Design ------------------------*/
+
+a {
+    text-decoration: none;
+    box-shadow: none;
+    text-decoration-line: none;
+}

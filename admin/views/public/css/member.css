@@ -1,0 +1,191 @@
+:root {
+    --blue-1: #003480;
+    --blue-2: #005bbc;
+    --blue-3: #006ad8;
+    --blue-4: #4285f3;
+    --bg-color: #E7ECF0;
+    --text-color-1: black;
+    --text-color-2: white;
+    --black-1: #262639;
+    --black-2: #4D4D5D;
+    --gradient-color: linear-gradient(to right, #004aad, #005bbc, #006ad8, #2d8cef);
+    --nav-bar-width: 80px;
+    --on-processing: #ffde59;
+    --not-done: #e94335;
+}
+
+p {
+    margin-bottom: 0;
+}
+.address {
+    font-size: 1rem;
+    margin-top: .3rem;
+}
+
+/*-----------------------LIST EVENT----------------------------*/
+  
+.member-container {
+    background-color: white;
+    font-size: 1rem;
+    margin: 1rem;
+    width: calc(100% - 20px);
+    height: 83vh;
+}
+
+.member-container .header-container {
+    display: flex;
+    align-items: center;
+}
+
+
+.member-container .header-container .create-member a i {
+    background-color: white;
+    padding: 5px;
+    font-size: 22px;
+    border-radius: 50%;
+    border: solid .3px rgb(190, 190, 190);
+    color: black;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.member-container .header-container .create-member a i:hover {
+    background-color: var(--blue-2);
+    color: white;
+    transition: all .3s ease;
+}
+
+
+.member-container .table-container {
+    overflow: auto;
+    width: 100%;
+}
+
+.member-container table {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    width: 100%;
+}
+
+.table-container table thead tr th,
+.table-container table thead tr td {
+    border: 1px solid #ddd;
+}
+
+.member-container table #title-row {
+    border-bottom: 2px solid #cad6d8;
+    background-color: #f5f5f5;
+    color: #578ebe;
+
+}
+
+.member-container table #title-row th {
+    color: #1da1f2;
+    font-weight: 600;
+}
+
+
+
+.member-container table th {
+    font-weight: 400;
+    padding: 1rem;
+
+}
+
+.member-container .create-member-wrapper {
+    width: 35%;
+    opacity: 0;
+    background-color: var(--bg-color-2);
+    padding: 1rem;
+    border-radius: 10px;
+    position: absolute;
+    left: 13%;
+    top: 21%;
+    transition: all 0.5s ease;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    z-index: -10;
+    position: absolute;
+    z-index: -2;
+}
+
+.member-container .create-member-wrapper input,
+.member-container .create-member-wrapper select {
+    width: 94%;
+    border: 1px;
+    margin: .5rem;
+    padding: .5rem;
+    border-radius: 10px;
+}
+
+.member-container .create-member-wrapper .create-member-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.member-container .create-member-wrapper .create-member-btn div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--black-1);
+    color: white;
+    width: 6rem;
+    padding: .5rem 1rem;
+    border-radius: 10px;
+}
+
+.member-container .create-member-wrapper .create-member-btn div button {
+    margin-left: 5px;
+    background-color: transparent;
+    cursor: pointer;
+    color: white;
+
+}
+
+.member-container .create-member-wrapper .create-member-btn div:hover {
+    background-color: var(--blue-2);
+    cursor: auto;
+    transition: all .3s ease;
+}
+
+.create-member-wrapper.createMemberActive {
+    width: 35%;
+    opacity: 1;
+    z-index: 100;
+}
+
+.memberBtn {
+    height: 60px;
+}
+
+.memberBtn i {
+    text-decoration: none;
+    font-size: 25px;
+}
+
+/*-JS-*/
+.member-status {
+    background-color: var(--on-processing);
+    border-radius: 15px;
+    padding: 1rem 2rem;
+
+}
+
+.memberBtn .bx {
+    color: black;
+}
+
+.bx-x:hover {
+    color: red;
+    transition: all .2s ease;
+}
+
+.bxs-edit-alt:hover {
+    color: green;
+    transition: all .2s ease;
+}
+
+html {
+    font-size: 15px;
+}
+

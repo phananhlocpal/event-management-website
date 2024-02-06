@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --blue-1: #003480;
+    --blue-2: #005bbc;
+    --blue-3: #006ad8;
+    --blue-4: #4285f3;
+    --bg-color: #E7ECF0;
+    --text-color-1: black;
+    --text-color-2: white;
+    --black-1: #262639;
+    --black-2: #4D4D5D;
+    --gradient-color: linear-gradient(to right, #004aad, #005bbc, #006ad8, #2d8cef);
+    --nav-bar-width: 80px;
+    --bg-color-2: #E7ECF0;
+}
+
+html {
+    font-size: 50%;
+    overflow-x: hidden;
+}
+
+body {
+    background: white;
+    color: var(--text-color-1);
+}
+
+.body__container {
+    display: flex;
+    width: 90%;
+    height: 80%;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.container__right {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container__left {
+    width: 60%;
+    background-image: var(--gradient-color);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container__left div img {
+    width: 400px;
+}
+
+.container__right-child {
+    background-color: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    width: 30vw;
+    height: 50vh;
+}
+
+.container__right-child div {
+    margin-top: 20px;
+}
+
+.greeting {
+    font-size: 25px;
+    color: var(--blue-1);
+}
+
+.block__inputUsername {
+    font-size: 20px;
+    width: 95%;
+    border-bottom: solid .5px grey;
+    margin-bottom: 40px;
+    margin-top: 40px;
+}
+
+.block__inputPassword {
+    font-size: 20px;
+    width: 95%;
+    border-bottom: solid .5px grey;
+    margin-bottom: 40px;
+    margin-top: 40px;
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+}
+
+.btn button {
+    font-size: 15px;
+    padding: 10px 20px;
+    border-radius: 12px;
+    background-color: transparent;
+    border: solid 3px var(--blue-1);
+}
+
+.btn button:hover {
+    background-color: var(--blue-1);
+    color: white;
+    cursor: pointer;
+    transition: all .5s ease;
+}
